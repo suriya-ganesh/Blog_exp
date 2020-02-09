@@ -7,4 +7,3 @@ urlpatterns = [
     path('authors_simple/', views.authors_simple, name='authors'),
     path('<int:question_id>/', views.detail, name='detail'),
 ]
-handler404 = views.handler404

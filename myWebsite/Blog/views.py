@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse
 from django.template import loader
 from .models import Author
 import logging
-from django.shortcuts import render
 
 # Create your views here.
 def Blog(request):
@@ -50,7 +49,8 @@ def authors_simple(request):
     }
     return render(request,"blog/index.html",context=context)
 
-def handler404(request, exception, template_name="404.html"):
+def handler404(request, exception, template_name="blog/404.html"):
     # response = render_to_response(template_name)
     # response.status_code = 404
-    return render(request,template_name,status=404)
+    content = {}
+    return render(request,template_name,content,status=404)
