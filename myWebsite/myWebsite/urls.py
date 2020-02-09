@@ -18,10 +18,13 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog', include('Blog.urls'))
+    path('blog/', include('Blog.urls')),
+
 ]
-# Add URL maps to redirect the base URL to our application
+
+# Add URL maps to redirect the base
+# URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='blog', permanent=False)),
 ]
