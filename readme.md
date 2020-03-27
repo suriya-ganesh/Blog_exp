@@ -8,6 +8,7 @@ is to record thoughts and ideas.
 
 * Sticky navbar
 * add images
+* Content Porting and Creating
 
 ### To Figure out
 
