@@ -8,5 +8,23 @@ is to record thoughts and ideas.
 
 * Sticky navbar
 * add images
-* figure out design
-    * The whole theme and stuff
+
+### To Figure out
+
+* Design ?
+    * The whole theme and Color scheme
+        * Home design
+            * Navbar ?
+                * About
+                * Contact
+            * Abstract intro / things I'm pursuing
+            * projects showoff
+            * post list, gist
+            * Social
+    * Scope of the website ?
+        
+* URIs
+    * '/'
+    * '/posts'
+    * '/post/<slug>'
+    * '/About'
