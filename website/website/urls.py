@@ -12,7 +12,13 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+
+- Make sure that the admin path is on the top.
+- or else, it resolves elsewhere.
+
 """
+
+
 from django.contrib import admin
 from django.urls import path, include
 
