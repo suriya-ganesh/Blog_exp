@@ -11,6 +11,10 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+#mainNav {
+   background-color: white;
+}
+
 html {
   color: #222;
   font-size: 1em;
@@ -35,7 +39,7 @@ border-color: #dc281e;
 }
 
 .masthead {
-background: #3398E1;
+background: #1dd7e0;
 height: auto;
 padding-bottom: 15px;
 box-shadow: 0 16px 48px #E3E7EB;
@@ -162,6 +166,7 @@ textarea {
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
+
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {

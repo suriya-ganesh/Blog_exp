@@ -3,6 +3,86 @@
 {% load static %}
 
   <!-- Add your site or application content here -->
+
+      <!--  Creating a terse intro  -->
+  <link rel="stylesheet" href="{% static 'css/card_carousel.css' %}">
+
+  <div class="container">
+  <div class="card mb-4">
+    <div class="card-body">
+        <h1>Heading will be here</h1>
+        <p>
+          adkjnfkjndf mdfjk  sdfm sd fksd lkjdf lkdsnflksdmnflkdmfkmnsdlkfmlsdkf
+          ksjdnfkjsdnfkjnsdkj fksndkjfnlskd fk sd kjsd fkmnd fkmn sdmf masnd f,mn dmf\kjj
+        </p>
+    </div>
+  </div>
+  </div>
+
+
+<!--   experiment is happening here -->
+
+<div class="container" >
+
+  <div class="container_new">
+  <div class="card_new">
+    <h3 class="title">Card 1</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+
+    </div>
+    <div class="circle">
+<!--       <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg> -->
+      <p class="mine"> kjsndkj kns  dsf </p>
+    </div>
+  </div>
+  <div class="card_new">
+    <h3 class="title">Card 2</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+  <div class="card_new">
+    <h3 class="title">Card 3</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+  <div class="card_new">
+    <h3 class="title">Card 4</h3>
+    <div class="bar">
+      <div class="emptybar"></div>
+      <div class="filledbar"></div>
+    </div>
+    <div class="circle">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle class="stroke" cx="60" cy="60" r="50"/>
+    </svg>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<!--   Experiment ends here -->
+
   <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -11,9 +91,9 @@
             {% for post in my_post_list %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
+                    <h2 class="card-title ">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <p class="card-text">{{post.content|slice:":300"|safe }}</p>
                     <p class="card-text">.....</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
