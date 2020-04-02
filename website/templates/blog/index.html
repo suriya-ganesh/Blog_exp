@@ -2,39 +2,33 @@
 {% block content %}
 {% load static %}
 
-  <!-- Add your site or application content here -->
-  <div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        {% if my_post_list %}
-        <div class="col-md-8 mt-3 left">
-            {% for post in my_post_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <p class="card-text">.....</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
+  <!-- list of post contents goes here -->
+<div class="div-p-list">
+  <h4>RECENT POSTS</h4>
+{% if my_post_list %}
+  <div class="text-left">
+  <ul style="list-style-type:none">
+{% for post in my_post_list %}
+
+
+  <li><a class="title" href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
+
+<!--                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>-->
+<!--                    <p class="card-text">{{post.content|slice:":200" }}</p>-->
+<!--                    <p class="card-text">.....</p>-->
+<!--                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>-->
+{% endfor %}
+  </ul>
+    </div>
+
+{% else %}
         <div class="col-md-8 mt-3 left">
             <div class="card mb-4">
                 <div class="card-body">
                            <p> There are no books (or so it would seem)</p>
                 </div>
             </div>
+        </div>
         {% endif %}
-        {% block sidebar %} {% include 'blog/sidebar.html' %} {% endblock sidebar %}
-          <script src="https://www.google-analytics.com/analytics.js" async></script>
-    </div>
-</div>
-</div>
 {% endblock %}
-
-
-
-
+</div>
