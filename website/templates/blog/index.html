@@ -2,9 +2,31 @@
 {% block content %}
 {% load static %}
 
+
+   <!-- Things I'm reading goes here -->
+<div class="home-content">
+<div class="div-p-list">
+  <h4>What I'm reading</h4>
+  {% if reading %}
+  <ul>
+  {% for element in reading %}
+  <li>
+    <a class="title" href="{{ element.link }}" target="_blank">{{ element.title }}</a></li>
+  </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+  <p>I am not reading anything.</p>
+  <p>Sadly.</p>
+  {% endif %}
+
+</div>
+
+
+
   <!-- list of post contents goes here -->
 <div class="div-p-list">
-  <h4>RECENT POSTS</h4>
+  <h4>Recent Posts</h4>
 {% if my_post_list %}
   <div class="text-left">
   <ul style="list-style-type:none">
@@ -13,10 +35,6 @@
 
   <li><a class="title" href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
 
-<!--                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>-->
-<!--                    <p class="card-text">{{post.content|slice:":200" }}</p>-->
-<!--                    <p class="card-text">.....</p>-->
-<!--                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>-->
 {% endfor %}
   </ul>
     </div>
@@ -31,4 +49,5 @@
         </div>
         {% endif %}
 {% endblock %}
+</div>
 </div>
