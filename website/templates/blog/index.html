@@ -8,10 +8,10 @@
 <div class="div-p-list">
   <h4>What I'm reading</h4>
   {% if reading %}
-  <ul>
+  <ul style="list-style-type:none">
   {% for element in reading %}
   <li>
-    <a class="title" href="{{ element.link }}" target="_blank">{{ element.title }}</a></li>
+    <a class="title" href="{{ element.link }}" target="_blank">{{ element.title }}</a>
   </li>
     {% endfor %}
     </ul>
