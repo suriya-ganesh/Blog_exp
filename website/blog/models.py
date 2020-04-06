@@ -29,6 +29,8 @@ class Post(models.Model):
 Note :
 Checkout this class, it sends multiple models to the same view, in object mode
 '''
+
+
 class Reading(models.Model):
 
     title = models.CharField(max_length=200, unique=True)
