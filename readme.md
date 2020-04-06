@@ -28,4 +28,4 @@ is to record thoughts and ideas.
     * '/'
     * '/posts'e
     * '/post/<slug>'
-    * '/About'
+    * '/about'
