@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Reading
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -8,5 +8,10 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
 
+class ReadingAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug', 'created_on')
+    search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Reading, ReadingAdmin)

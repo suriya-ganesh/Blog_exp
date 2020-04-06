@@ -26,6 +26,6 @@ is to record thoughts and ideas.
         
 * URIs
     * '/'
-    * '/posts'
+    * '/posts'e
     * '/post/<slug>'
     * '/About'

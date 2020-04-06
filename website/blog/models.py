@@ -23,3 +23,24 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+'''
+Note :
+Checkout this class, it sends multiple models to the same view, in object mode
+'''
+
+
+class Reading(models.Model):
+
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    link = models.CharField(max_length=200)
+    updated_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
