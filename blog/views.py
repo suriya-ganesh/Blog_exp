@@ -1,6 +1,6 @@
 from django.views import generic
 from django.shortcuts import render
-from .models import Post,Reading
+from .models import Post, Reading, About
 
 class PostList(generic.ListView):
     model = Post
@@ -14,7 +14,13 @@ class PostList(generic.ListView):
         context['reading'] = Reading.objects.all()
         return context
 
+
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
 
+
+class AboutDetail(generic.ListView):
+
+    model = About
+    template_name = 'blog/about.html'

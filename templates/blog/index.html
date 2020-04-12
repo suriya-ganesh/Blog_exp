@@ -2,11 +2,14 @@
 {% block content %}
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 
    <!-- Things I'm reading goes here -->
 <div class="home-content">
-<div class="div-p-list">
-  <h4>What I'm reading</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+  <h4 class="card-h4">What I'm reading</h4>
   {% if reading %}
   <ul style="list-style-type:none">
   {% for element in reading %}
@@ -19,14 +22,18 @@
   <p>I am not reading anything.</p>
   <p>Sadly.</p>
   {% endif %}
-
+  </div>
+  </div>
+</div>
 </div>
 
 
 
   <!-- list of post contents goes here -->
-<div class="div-p-list">
-  <h4>Recent Posts</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top div-p-list">
+  <h4 class="card-h4">Recent Posts</h4>
 {% if my_post_list %}
   <div class="text-left">
   <ul style="list-style-type:none">
@@ -48,6 +55,8 @@
             </div>
         </div>
         {% endif %}
+  </div>
+  </div>
+  </div>
+
 {% endblock %}
-</div>
-</div>

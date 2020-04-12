@@ -1,13 +1,13 @@
-body {
-font-family: "Roboto", sans-serif;
-font-size: 18px;
-background-color: #fdfdfd;
-}
+
 
 .head_text {
 color: white;
 }
 
+h4.card-h4 {
+padding: 10px;
+}
+
 .card {
-box-shadow: 0 16px 48px #E3E7EB;
+
 }

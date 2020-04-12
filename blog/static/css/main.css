@@ -17,10 +17,9 @@ html {
   line-height: 1.4;
 }
 
-
 body {
         font-family: "Roboto", sans-serif;
-        font-size: 17px;
+        font-size: 18px;
         background-color: #fdfdfd;
 }
 
@@ -32,13 +31,6 @@ a:hover {
 color: black;
 }
 
-.div-p-list {
-  position: relative;
-  top: 50px;
-  left: 60px;
-  padding: 20px;
-
-}
 
 .navbar-head {
 position: relative;
@@ -72,6 +64,10 @@ padding-top: 10px;
 
 .mainNav {
 background-color : #3398E1;
+}
+
+.about-div {
+border-style: dotted;
 }
 
 /*
